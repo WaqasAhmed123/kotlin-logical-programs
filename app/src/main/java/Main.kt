@@ -57,17 +57,15 @@ fun main() {
 //    println("You entered: $integer")
 
 
-    //oop
+    //oop------------------------------------------------------------------------------
 
-    val c1 = Car()
+//    val c1 = Car("Ford", "Mustang", 1969)
+////    c1.drive("ferrari")
+//    c1.drive()
 
-// Access the properties and add some values to it
-    c1.brand = "Ford"
-    c1.model = "Mustang"
-    c1.year = 1969
+    val childInstance=Child()
+    childInstance.colorOfChild()
 
-    println(c1.brand)   // Outputs Ford
-    println(c1.model)   // Outputs Mustang
-    println(c1.year)
+
 
 }

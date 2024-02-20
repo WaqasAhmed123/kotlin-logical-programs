@@ -1,18 +1,19 @@
-class  Car{
-    var brand = ""
-    var model = ""
-    var year = 0
+//class  Car(var brand: String, var model: String, var year: Int){
+////    var brand = ""
+////    var model = ""
+////    var year = 0
+//    fun drive(carName:String="None"){
+//        println("$carName is driven by me.")
+//
+//    }
+//}
+open class Parent{
+    val color="White"
+
 }
-fun main() {
-// Create a c1 object of the Car class
-    val c1 = Car()
+class Child:Parent(){
+    fun colorOfChild(){
+        println("The color of child is $color")
+    }
 
-// Access the properties and add some values to it
-    c1.brand = "Ford"
-    c1.model = "Mustang"
-    c1.year = 1969
-
-    println(c1.brand)   // Outputs Ford
-    println(c1.model)   // Outputs Mustang
-    println(c1.year)
 }
