@@ -11,9 +11,13 @@ open class Parent{
     val color="White"
 
 }
-class Child:Parent(){
+open class Child:Parent(){
     fun colorOfChild(){
         println("The color of child is $color")
     }
+
+}
+
+class  GrandChild:Child(){
 
 }

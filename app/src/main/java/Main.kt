@@ -63,9 +63,11 @@ fun main() {
 ////    c1.drive("ferrari")
 //    c1.drive()
 
-    val childInstance=Child()
-    childInstance.colorOfChild()
+//    val childInstance=Child()
+//    childInstance.colorOfChild()
 
-
+    val grandChildInstance=GrandChild()
+    grandChildInstance.colorOfChild()
+    println( grandChildInstance.color)
 
 }
