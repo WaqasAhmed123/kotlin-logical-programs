@@ -1,73 +1,40 @@
-    import java.util.Scanner
-    val reader = Scanner(System.`in`)
+import java.util.ArrayList
+import java.util.Scanner
+
+val reader = Scanner(System.`in`)
 fun main() {
-//    println("Hello World")
-//    var name="waqas"
-//    val value=5
-//    println(name+5)
-//    print(value)
-//    val myNum: Int = 5                // Int
-//    val myDoubleNum: Double = 5.99    // Double
-//    val myLetter: Char = 'D'          // Char
-//    val myBoolean: Boolean = true     // Boolean
-//    val myText: String = "Hello"
-//    val day = 7
-//
-//    val result = when (day) {
-//        1 -> "Monday"
-//        2 -> "Tuesday"
-//        3 -> "Wednesday"
-//        4 -> "Thursday"
-//        5 -> "Friday"
-//        6 -> "Saturday"
-//        7 -> "Sunday"
-//        else -> "Invalid day."
-//    }
-//    println(result)
+    var unsortedArray = arrayListOf<Int>(5, 4, 3, 2, 1)
 
-//    val cars = arrayOf("Volvo", "BMW", "Ford", "Mazda")
-//    for (car in cars){
-//        println(car)
-//
-//    }
+    fun search(arrayList: ArrayList<Int>) {
+        print("search Element: ")
+        val elementToSearch = readLine()!!.toInt()
+//    var smallest=unsortedArray[0]
+        for ((index, element) in unsortedArray.withIndex()) {
+            if (element == elementToSearch) {
+                println("$elementToSearch is found at index $index")
+            }
+        }
 
-//    for (chars in 'a'..'x') {
-//        print(chars)
-//    }
-//fun myFunction() {
-//    println("I just got executed!")
-//}
-//    myFunction()
+    }
 
-//    fun printFullName(fname: String,lname: String,age: Int) {
-//        println("$fname  $lname  is  $age years old")
-//    }
-//    printFullName(fname = "Waqas", lname = "Ahmed", age = 22)
+    fun sort(arrayList: ArrayList<Int>): ArrayList<Int> {
+        val n = arrayList.size
+        for (i in 0 until n - 1) {
+            for (j in 0 until n -  1) {
+                if (arrayList[j] > arrayList[j + 1]) {
+                    val temp = arrayList[j]
+                    arrayList[j] = arrayList[j + 1]
+                    arrayList[j + 1] = temp
+                }
+            }
+        }
+        print(arrayList)
+        return arrayList
 
-//    fun myFunction(x: Int, y: Int): Int {
-//        return (x + y)
-//    }
-//    fun myFunction(x: Int, y: Int) = x + y
-//    print(myFunction(5,10))
-//    print("input")
-//var input= readLine()
-//print("enter num")
-//    var integer:Int = reader.nextInt()
-//
-//    println("You entered: $integer")
+    }
 
+//    search(arrayList = unsortedArray)
+    sort(arrayList = unsortedArray)
 
-    //oop------------------------------------------------------------------------------
-
-//    val c1 = Car("Ford", "Mustang", 1969)
-////    c1.drive("ferrari")
-//    c1.drive()
-
-//    val childInstance=Child()
-//    childInstance.colorOfChild()
-
-    val grandChildInstance=GrandChild()
-    grandChildInstance.colorOfChild()
-    println( grandChildInstance.color)
 
 }
